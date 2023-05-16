@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node1"/>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node2"/>
+    
+    <node pkg="turtlesim" type="turtle_teleop_key" name="turtle_teleop_key" output="screen"/>
+    
+    <node pkg="turtle_follower" type="turtle_follower_node.py" name="follower_node">
+        <param name="follower_speed" value="2.0"/>
+    </node>
+</launch>
